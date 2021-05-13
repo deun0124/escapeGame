@@ -1,0 +1,7 @@
+canvas#myCanvas{
+    display: flex;
+    justify-content: center;
+    background :green;
+    margin : auto;
+
+}
