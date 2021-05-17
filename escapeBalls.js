@@ -13,13 +13,37 @@ for(var i=0; i<rock.count; i++){
     rock[i] = {};
 }
 
+var base_img = new Image();
+base_img.src='flower.png';
 
+ base_img.onload = function(x,y){
+     ctx.drawImage(base_img,x,y,30 ,30)
+
+
+ }
+
+ var hero_img = new Image();
+ hero_img.src='ddong.png';
+ hero_img.onload = function(x,y){
+     ctx.drawImage(hero_img,x,y,heroWidth,heroHeight)
+ }
+
+// base_img.onload = function(){
+//     ctx.drawImage(base_img,rock[i].x,rock[i].y,30 ,30)
+
+
+// }
 function drawRock(){
     for(var i=0; i<rock.count; i++){
-        ctx.fillStyle = "red";
-        ctx.fillRect(rock[i].x,rock[i].y,30 ,30);
-        
+        //ctx.fillStyle = "red";
+       // ctx.fillRect(rock[i].x,rock[i].y,30 ,30);
+        // base_image = new Image();
+        // base_image.src = 'https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png';
+       base_img.onload(rock[i].x,rock[i].y)
 
+     
+      
+           
     }
 }
 
@@ -37,17 +61,19 @@ function makeRock(){
 }
 
 
-var heroWidth =45;
-var heroHeight =50;
+var heroWidth =60;
+var heroHeight =70;
 var heroX = (canvas.width-heroWidth)/2
-var heroY = canvas.height-(heroHeight)*2
+var heroY = canvas.height-100
 function drawHero(){
 
    
     ctx.beginPath();
-    ctx.rect(heroX,heroY,heroWidth,heroHeight)
-    ctx.fillStyle="#fdd700"
-    ctx.fill();
+    // ctx.rect(heroX,heroY,heroWidth,heroHeight)
+    // ctx.fillStyle="#fdd700"
+    // ctx.fill();
+
+    hero_img.onload(heroX,heroY)
     ctx.closePath();
 }
 

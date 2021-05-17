@@ -1,7 +1,7 @@
 canvas#myCanvas{
     display: flex;
     justify-content: center;
-    background :green;
+    background :rgb(127, 138, 187);
     margin : auto;
 
 }
@@ -12,7 +12,13 @@ canvas#myCanvas{
     font-size: 40px;
     font-family: 'Wemakeprice-Bold';
 }
-
+p{
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    font-family: 'Wemakeprice-Bold';
+    color : palevioletred
+}
 .gameover{
     display: none;
     position: absolute;
