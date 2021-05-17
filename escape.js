@@ -3,7 +3,8 @@ const canvas = document.getElementById("myCanvas")
 const ctx = canvas.getContext('2d');
 
 var radius = 10;
-var x = Math.random()*(canvas.width-1);
+//var x = Math.random()*(canvas.width-1);
+var x = canvas.width;
 var y = 10;
 var speed = 5;
 var status = 1;
@@ -76,7 +77,7 @@ function draw(){
 //    x+=speed;
     y+=speed;
 
-    
+
     if(status==1){
         
         drawBall()

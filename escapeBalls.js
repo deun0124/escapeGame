@@ -51,7 +51,7 @@ function makeRock(){
     for(var i=0; i<rock.count; i++){
         if(rock[i].status !=1){
             rock[i].status=1;
-            rock[i].x = Math.random()*(canvas.width-100);
+            rock[i].x = Math.random()*(canvas.width-1);
             rock[i].y = -30;
             rock[i].frame = (Math.random()*10)%5 +3;
 
@@ -84,12 +84,12 @@ function drawMove(){
     for (var i=0; i<rock.count; i++){
         if(rock[i].status==1){
             rock[i].y += rock[i].frame
-            if(heroX > rock[i].x && heroX <rock[i].x+30 && heroY> rock[i].y && heroY< rock[i].y+30){
+            if(heroX > rock[i].x && heroX <rock[i].x+25 && heroY> rock[i].y && heroY< rock[i].y+25){
                 
                 
              
                 clearInterval(interval)
-                alert( `${score}점 끝`)
+                alert( `${score}점 끝났습니다.`)
                  document.location.reload()
                 
                
